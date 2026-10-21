@@ -152,8 +152,8 @@ async def handle_client(reader, writer):
 async def main_server():
     ssl_context = ssl.create_default_context(ssl.Purpose.CLIENT_AUTH)
     ssl_context.load_cert_chain(
-        certfile='/home/user/Desktop/host/certs/cert.pem',
-        keyfile='/home/user/Desktop/host/certs/key.pem'
+        certfile='/home/host/certs/cert.pem',
+        keyfile='/home/host/certs/key.pem'
     )
 
     server = await asyncio.start_server(
